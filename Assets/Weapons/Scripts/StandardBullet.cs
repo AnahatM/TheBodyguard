@@ -5,6 +5,9 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody2D))]
 public class StandardBullet : MonoBehaviour
 {
+    [Header("Gameplay Values")]
+    [SerializeField] private int bulletDamage = 10;
+
     [Header("Bullet Movement")]
     [SerializeField] private float bulletSpeed = 15;
 
@@ -29,5 +32,22 @@ public class StandardBullet : MonoBehaviour
     {
         Vector2 moveDirection = transform.right;
         rb.velocity = moveDirection.normalized * bulletSpeed;
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.TryGetComponent<EnemyHealth>(out var enemyHealth))
+        {
+            enemyHealth.TakeDamage(bulletDamage);
+            Destroy(gameObject);
+            return;
+        }
+
+        if (collision.gameObject.TryGetComponent<PresidentHealth>(out var presidentHealth))
+        {
+            presidentHealth.TakeDamage(bulletDamage);
+            Destroy(gameObject);
+            return;
+        }
     }
 }
