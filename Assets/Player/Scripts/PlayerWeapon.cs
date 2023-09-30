@@ -26,6 +26,7 @@ public class PlayerWeapon : MonoBehaviour
     private Camera cam;
     private PlayerInventory playerInventory;
     private InterfaceManager interfaceManager;
+    private AudioSource audioSource;
 
     public WeaponConfig selectedWeapon;
 
@@ -34,6 +35,7 @@ public class PlayerWeapon : MonoBehaviour
         cam = Camera.main;
         playerInventory = GetComponent<PlayerInventory>();
         interfaceManager = FindObjectOfType<InterfaceManager>();
+        audioSource = FindObjectOfType<AudioSource>();
     }
 
     private void Start()
@@ -71,7 +73,7 @@ public class PlayerWeapon : MonoBehaviour
     {
         if (currentBulletCount <= 0)
         {
-            Debug.Log("Need to Reload");
+            audioSource.PlayOneShot(selectedWeapon.emptyClipSFX);
             return;
         }
 
@@ -85,12 +87,16 @@ public class PlayerWeapon : MonoBehaviour
         currentBulletCount--;
         currentBulletCount = Mathf.Clamp(currentBulletCount, 0, currentMagSize);
 
+        audioSource.PlayOneShot(selectedWeapon.shootSFX);
+
         timeSinceLastShot = 0f; 
     }
 
     private IEnumerator ReloadWeapon()
     {
         isReloading = true;
+
+        audioSource.PlayOneShot(selectedWeapon.reloadSFX);
 
         yield return new WaitForSeconds(selectedWeapon.reloadTime);
 

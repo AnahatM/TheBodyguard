@@ -18,6 +18,7 @@ public class WeaponConfig : ScriptableObject
     [Header("Audio")]
     [SerializeField] public AudioClip shootSFX;
     [SerializeField] public AudioClip reloadSFX;
+    [SerializeField] public AudioClip emptyClipSFX;
 
     [Header("Particles")]
     [SerializeField] public ParticleSystem shootParticles;
