@@ -9,7 +9,7 @@ public class PlayerWeapon : MonoBehaviour
     [SerializeField] private SpriteRenderer weaponSprite;
     [SerializeField] private Transform shootPoint;
     [SerializeField] private Transform weaponPivot;
-    [SerializeField] private Transform spawnedBulletsContainer;
+    [SerializeField] private string spawnedBulletsContainerName = "SpawnedBullets";
 
     [Header("KeyBindings")]
     [SerializeField] private KeyCode reloadKey = KeyCode.R;
@@ -27,6 +27,7 @@ public class PlayerWeapon : MonoBehaviour
     private PlayerInventory playerInventory;
     private InterfaceManager interfaceManager;
     private AudioSource audioSource;
+    private Transform spawnedBulletsContainer;
 
     public WeaponConfig selectedWeapon;
 
@@ -36,6 +37,7 @@ public class PlayerWeapon : MonoBehaviour
         playerInventory = GetComponent<PlayerInventory>();
         interfaceManager = FindObjectOfType<InterfaceManager>();
         audioSource = FindObjectOfType<AudioSource>();
+        spawnedBulletsContainer = GameObject.Find(spawnedBulletsContainerName).transform;
     }
 
     private void Start()
@@ -81,7 +83,7 @@ public class PlayerWeapon : MonoBehaviour
             selectedWeapon.bulletPrefab,
             shootPoint.position,
             weaponPivot.rotation,
-            spawnedBulletsContainer
+            spawnedBulletsContainer ? spawnedBulletsContainer : null
         );
 
         currentBulletCount--;
