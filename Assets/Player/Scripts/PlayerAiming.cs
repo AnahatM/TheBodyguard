@@ -28,13 +28,13 @@ public class PlayerAiming : MonoBehaviour
         AimArm(weaponPivot, 0);
     }
 
-    private void AimArm(Transform arm, byte compensation)
+    private void AimArm(Transform arm, int allowCompensation)
     {
         Vector3 difference = cam.ScreenToWorldPoint(Input.mousePosition) - arm.position;
         difference.Normalize();
 
         float rotationZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
 
-        arm.rotation = Quaternion.Euler(arm.rotation.x, arm.rotation.y, rotationZ + spriteZCompensation * compensation);
+        arm.rotation = Quaternion.Euler(arm.rotation.x, arm.rotation.y, rotationZ + spriteZCompensation * allowCompensation);
     }
 }

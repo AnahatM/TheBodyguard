@@ -516,6 +516,8 @@ MonoBehaviour:
   - {fileID: 321247483}
   - {fileID: 1844190834}
   - {fileID: 364067197}
+  weaponPivot: {fileID: 180919426}
+  weaponSprite: {fileID: 1181322561}
   horizontalInputAxis: Horizontal
   verticalInputAxis: Vertical
   moveSpeed: 4.5
