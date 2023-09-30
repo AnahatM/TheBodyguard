@@ -15,10 +15,9 @@ MonoBehaviour:
   weaponSprite: {fileID: 0}
   weaponName: Weapon Name
   magazineSize: 30
-  fireRate: 60
+  fireRate: 3
   reloadTime: 1.5
   bulletPrefab: {fileID: 293962322021500226, guid: 9cabb6da59174a448985e4e3c77f70f6, type: 3}
-  bulletSpeed: 5
   shootSFX: {fileID: 0}
   reloadSFX: {fileID: 0}
   shootParticles: {fileID: 0}
