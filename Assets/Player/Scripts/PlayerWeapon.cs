@@ -9,6 +9,7 @@ public class PlayerWeapon : MonoBehaviour
     [SerializeField] private SpriteRenderer weaponSprite;
     [SerializeField] private Transform shootPoint;
     [SerializeField] private Transform weaponPivot;
+    [SerializeField] private Transform spawnedBulletsContainer;
 
     [Header("Input")]
     [SerializeField] private int shootMouseBtn = 0;
@@ -42,7 +43,8 @@ public class PlayerWeapon : MonoBehaviour
         GameObject bullet = Instantiate(
             selectedWeapon.bulletPrefab, 
             shootPoint.position, 
-            weaponPivot.rotation
+            weaponPivot.rotation,
+            spawnedBulletsContainer
         );
     }
 }

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(Rigidbody2D))]
 public class StandardBullet : MonoBehaviour
 {
     [Header("Bullet Movement")]
@@ -16,6 +17,12 @@ public class StandardBullet : MonoBehaviour
 
     private void Start()
     {
-        
+        SetBulletSpeed();
+    }
+
+    private void SetBulletSpeed()
+    {
+        Vector2 moveDirection = transform.right;
+        rb.velocity = moveDirection.normalized * bulletSpeed;
     }
 }
