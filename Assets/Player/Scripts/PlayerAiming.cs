@@ -11,7 +11,7 @@ public class PlayerAiming : MonoBehaviour
     [SerializeField] private Transform leftArm;
     [SerializeField] private Transform weaponPivot;
 
-    [Header("Character References")]
+    [Header("Aim Settings")]
     [SerializeField] private float spriteZCompensation = 90;
 
     private Camera cam;
