@@ -20,6 +20,11 @@ public class StandardBullet : MonoBehaviour
         SetBulletSpeed();
     }
 
+    private void OnBecameInvisible()
+    {
+        Destroy(gameObject);
+    }
+
     private void SetBulletSpeed()
     {
         Vector2 moveDirection = transform.right;
