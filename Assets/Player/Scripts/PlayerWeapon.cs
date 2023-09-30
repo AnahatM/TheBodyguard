@@ -46,19 +46,18 @@ public class PlayerWeapon : MonoBehaviour
     {
         timeSinceLastShot += Time.deltaTime;
 
-        if (Input.GetMouseButtonDown(shootMouseBtn))
+        if (Input.GetMouseButtonDown(shootMouseBtn) && !isReloading && timeSinceLastShot >= 1f / selectedWeapon.fireRate)
         {
-            if (!isReloading && timeSinceLastShot >= 1f / selectedWeapon.fireRate)
-                ShootSelectedWeapon();
+             ShootSelectedWeapon();
         }
 
-        if (Input.GetKeyDown(reloadKey))
+        if (Input.GetKeyDown(reloadKey) && !isReloading && currentBulletCount < currentMagSize)
         {
-            if (!isReloading && currentBulletCount < currentMagSize)
-                StartCoroutine(ReloadWeapon());
+             StartCoroutine(ReloadWeapon());
         }
 
         interfaceManager.SetBulletsUI(currentBulletCount, currentMagSize);
+        interfaceManager.SetWeaponUI(selectedWeapon);
     }
 
     private void SelectWeapon(WeaponConfig weapon)
