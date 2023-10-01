@@ -719,20 +719,12 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 806242460909614212, guid: 7cb55a7f812f4e64b8e2c18ce52ed6e3, type: 3}
       propertyPath: startInventory.Array.size
-      value: 4
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 806242460909614212, guid: 7cb55a7f812f4e64b8e2c18ce52ed6e3, type: 3}
-      propertyPath: startInventory.Array.data[1]
+      propertyPath: startInventory.Array.data[0]
       value: 
-      objectReference: {fileID: 11400000, guid: 9e68307cb5a102c4185a5c64eecc01eb, type: 2}
-    - target: {fileID: 806242460909614212, guid: 7cb55a7f812f4e64b8e2c18ce52ed6e3, type: 3}
-      propertyPath: startInventory.Array.data[2]
-      value: 
-      objectReference: {fileID: 11400000, guid: 94f605a99f798ed4082e513c50a4bc5e, type: 2}
-    - target: {fileID: 806242460909614212, guid: 7cb55a7f812f4e64b8e2c18ce52ed6e3, type: 3}
-      propertyPath: startInventory.Array.data[3]
-      value: 
-      objectReference: {fileID: 11400000, guid: a71998e6700ba374baa4c7ae8200f12d, type: 2}
+      objectReference: {fileID: 11400000, guid: 9c4654db59829874fb39d6cf2522a25c, type: 2}
     - target: {fileID: 3671206330033997140, guid: 7cb55a7f812f4e64b8e2c18ce52ed6e3, type: 3}
       propertyPath: m_RootOrder
       value: 5

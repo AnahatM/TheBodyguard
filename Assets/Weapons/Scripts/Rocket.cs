@@ -40,11 +40,12 @@ public class Rocket : StandardBullet
         blastRadius.SetActive(true);
 
         // Instantiate Explosion Particles
-        Instantiate(
+        GameObject explosion = Instantiate(
             explosionParticles,
             transform.position,
             Quaternion.identity
         );
+        Destroy(explosion, objectDestroyDelay);
 
         Destroy(gameObject, objectDestroyDelay);
     }
