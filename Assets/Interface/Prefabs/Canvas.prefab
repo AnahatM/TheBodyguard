@@ -4012,7 +4012,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &5537648255021092923
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4407,6 +4407,34 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1031135349278074871}
     m_Modifications:
+    - target: {fileID: 3660180312797574871, guid: 95cc29df221a95640994488751feb9fb, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3660180312797574871, guid: 95cc29df221a95640994488751feb9fb, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3660180312797574871, guid: 95cc29df221a95640994488751feb9fb, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 4103041418034383173}
+    - target: {fileID: 3660180312797574871, guid: 95cc29df221a95640994488751feb9fb, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3660180312797574871, guid: 95cc29df221a95640994488751feb9fb, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: HandleClick
+      objectReference: {fileID: 0}
+    - target: {fileID: 3660180312797574871, guid: 95cc29df221a95640994488751feb9fb, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: WeaponBuyButton, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3660180312797574871, guid: 95cc29df221a95640994488751feb9fb, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 6579589454878638978, guid: 95cc29df221a95640994488751feb9fb, type: 3}
       propertyPath: m_Name
       value: WeaponBuyBtn
@@ -4429,7 +4457,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7897912430236981172, guid: 95cc29df221a95640994488751feb9fb, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7897912430236981172, guid: 95cc29df221a95640994488751feb9fb, type: 3}
       propertyPath: m_AnchorMin.x
@@ -4437,7 +4465,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7897912430236981172, guid: 95cc29df221a95640994488751feb9fb, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7897912430236981172, guid: 95cc29df221a95640994488751feb9fb, type: 3}
       propertyPath: m_SizeDelta.x
@@ -4477,11 +4505,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7897912430236981172, guid: 95cc29df221a95640994488751feb9fb, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 400
       objectReference: {fileID: 0}
     - target: {fileID: 7897912430236981172, guid: 95cc29df221a95640994488751feb9fb, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -90
       objectReference: {fileID: 0}
     - target: {fileID: 7897912430236981172, guid: 95cc29df221a95640994488751feb9fb, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -4500,6 +4528,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 95cc29df221a95640994488751feb9fb, type: 3}
+--- !u!114 &4103041418034383173 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3174383042769700934, guid: 95cc29df221a95640994488751feb9fb, type: 3}
+  m_PrefabInstance: {fileID: 1512438585107169539}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73e7319eba94d0e4789ea8ac7d9b8cdd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &8747757820608419511 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7897912430236981172, guid: 95cc29df221a95640994488751feb9fb, type: 3}
@@ -4513,6 +4552,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1031135349278074871}
     m_Modifications:
+    - target: {fileID: 3174383042769700934, guid: 95cc29df221a95640994488751feb9fb, type: 3}
+      propertyPath: weaponCost
+      value: 150
+      objectReference: {fileID: 0}
     - target: {fileID: 3174383042769700934, guid: 95cc29df221a95640994488751feb9fb, type: 3}
       propertyPath: purchasableWeapon
       value: 
@@ -4539,7 +4582,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7897912430236981172, guid: 95cc29df221a95640994488751feb9fb, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7897912430236981172, guid: 95cc29df221a95640994488751feb9fb, type: 3}
       propertyPath: m_AnchorMin.x
@@ -4547,7 +4590,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7897912430236981172, guid: 95cc29df221a95640994488751feb9fb, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7897912430236981172, guid: 95cc29df221a95640994488751feb9fb, type: 3}
       propertyPath: m_SizeDelta.x
@@ -4587,11 +4630,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7897912430236981172, guid: 95cc29df221a95640994488751feb9fb, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 400
       objectReference: {fileID: 0}
     - target: {fileID: 7897912430236981172, guid: 95cc29df221a95640994488751feb9fb, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -240
       objectReference: {fileID: 0}
     - target: {fileID: 7897912430236981172, guid: 95cc29df221a95640994488751feb9fb, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -4624,6 +4667,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 1031135349278074871}
     m_Modifications:
     - target: {fileID: 3174383042769700934, guid: 95cc29df221a95640994488751feb9fb, type: 3}
+      propertyPath: weaponCost
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 3174383042769700934, guid: 95cc29df221a95640994488751feb9fb, type: 3}
       propertyPath: purchasableWeapon
       value: 
       objectReference: {fileID: 11400000, guid: a71998e6700ba374baa4c7ae8200f12d, type: 2}
@@ -4649,7 +4696,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7897912430236981172, guid: 95cc29df221a95640994488751feb9fb, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7897912430236981172, guid: 95cc29df221a95640994488751feb9fb, type: 3}
       propertyPath: m_AnchorMin.x
@@ -4657,7 +4704,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7897912430236981172, guid: 95cc29df221a95640994488751feb9fb, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7897912430236981172, guid: 95cc29df221a95640994488751feb9fb, type: 3}
       propertyPath: m_SizeDelta.x
@@ -4697,11 +4744,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7897912430236981172, guid: 95cc29df221a95640994488751feb9fb, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 400
       objectReference: {fileID: 0}
     - target: {fileID: 7897912430236981172, guid: 95cc29df221a95640994488751feb9fb, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -390
       objectReference: {fileID: 0}
     - target: {fileID: 7897912430236981172, guid: 95cc29df221a95640994488751feb9fb, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x

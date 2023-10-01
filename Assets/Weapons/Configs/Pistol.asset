@@ -14,8 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponSprite: {fileID: 21300000, guid: 197fae300e399104fb68795df74dc77d, type: 3}
   weaponName: Pistol
+  isFullAuto: 0
   magazineSize: 15
-  fireRate: 15
+  fireRate: 10
   reloadTime: 1.5
   bulletPrefab: {fileID: 293962322021500226, guid: 9cabb6da59174a448985e4e3c77f70f6, type: 3}
   shootSFX: {fileID: 8300000, guid: a8390e3d27bc5264388bef33f0d31736, type: 3}

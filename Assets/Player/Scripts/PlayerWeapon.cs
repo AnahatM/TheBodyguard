@@ -20,7 +20,7 @@ public class PlayerWeapon : MonoBehaviour
     private int currentBulletCount = 0;
     private int currentMagSize = 0;
     private float timeSinceLastShot = 0f;
-
+    private bool isFiring = false;
     private bool isReloading = false;
 
     private Camera cam;
@@ -48,12 +48,29 @@ public class PlayerWeapon : MonoBehaviour
 
         if (Input.GetMouseButtonDown(shootMouseBtn) && !isReloading && timeSinceLastShot >= 1f / selectedWeapon.fireRate)
         {
-             ShootSelectedWeapon();
+            if (selectedWeapon.isFullAuto)
+            {
+                isFiring = true;
+            }
+            ShootSelectedWeapon();
+        }
+
+        if (Input.GetMouseButton(shootMouseBtn) && !isReloading && selectedWeapon.isFullAuto)
+        {
+            if (timeSinceLastShot >= 1f / selectedWeapon.fireRate)
+            {
+                ShootSelectedWeapon();
+            }
+        }
+
+        if (Input.GetMouseButtonUp(shootMouseBtn) && selectedWeapon.isFullAuto)
+        {
+            isFiring = false;
         }
 
         if (Input.GetKeyDown(reloadKey) && !isReloading && currentBulletCount < currentMagSize)
         {
-             StartCoroutine(ReloadWeapon());
+            StartCoroutine(ReloadWeapon());
         }
 
         interfaceManager.SetBulletsUI(currentBulletCount, currentMagSize);
@@ -72,7 +89,8 @@ public class PlayerWeapon : MonoBehaviour
     {
         if (currentBulletCount <= 0)
         {
-            audioSource.PlayOneShot(selectedWeapon.emptyClipSFX);
+            if (!selectedWeapon.isFullAuto)
+                audioSource.PlayOneShot(selectedWeapon.emptyClipSFX);
             return;
         }
 
@@ -88,7 +106,7 @@ public class PlayerWeapon : MonoBehaviour
 
         audioSource.PlayOneShot(selectedWeapon.shootSFX);
 
-        timeSinceLastShot = 0f; 
+        timeSinceLastShot = 0f;
     }
 
     private IEnumerator ReloadWeapon()

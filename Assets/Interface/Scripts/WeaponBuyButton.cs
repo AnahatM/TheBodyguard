@@ -12,6 +12,9 @@ public class WeaponBuyButton : MonoBehaviour
     [SerializeField] private int weaponCost = 100;
     [SerializeField] private string currencySymbol = "$";
 
+    [Header("UI Settings")]
+    [SerializeField] private float btnDestroyDelay = 1f;
+
     [Header("References")]
     [SerializeField] private Image icon;
     [SerializeField] private TextMeshProUGUI btnText;
@@ -22,10 +25,12 @@ public class WeaponBuyButton : MonoBehaviour
     [SerializeField] private Color negativeColor;
 
     private PlayerStats playerStats;
+    private PlayerInventory playerInventory ;
 
     private void Awake()
     {
         playerStats = FindObjectOfType<PlayerStats>();
+        playerInventory = FindObjectOfType<PlayerInventory>();
     }
 
     private void Update()
@@ -40,5 +45,13 @@ public class WeaponBuyButton : MonoBehaviour
         btnText.text = purchasableWeapon.weaponName;
         priceText.text = currencySymbol + weaponCost;
         priceText.color = playerStats.cash >= weaponCost ? positiveColor : negativeColor;
+    }
+
+    public void HandleClick()
+    {
+        if (playerStats.cash < weaponCost) return;
+        playerInventory.AddToInventory(purchasableWeapon);
+        playerStats.cash -= weaponCost;
+        Destroy(gameObject, btnDestroyDelay);
     }
 }

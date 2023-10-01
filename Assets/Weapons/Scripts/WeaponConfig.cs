@@ -8,6 +8,7 @@ public class WeaponConfig : ScriptableObject
     [SerializeField] public string weaponName = "Weapon Name";
 
     [Header("Shooting Info")]
+    [SerializeField] public bool isFullAuto = false;
     [SerializeField] public int magazineSize = 30;
     [SerializeField] public int fireRate = 60;
     [SerializeField] public float reloadTime = 1.5f;
