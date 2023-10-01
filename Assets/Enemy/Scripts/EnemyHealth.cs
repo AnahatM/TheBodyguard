@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class EnemyHealth : MonoBehaviour
 {
+    [Header("Gameplay Values")]
+    [SerializeField] private int cashDrop = 10;
+
     [Header("Health Values")]
     [SerializeField] private int fullHealth = 100;
 
@@ -25,7 +28,12 @@ public class EnemyHealth : MonoBehaviour
     private void HandleDeath()
     {
         // TODO Death Particle
-        // TODO Increase killCount and cash
+
+        // Increase Player Stats
+        PlayerStats playerStats = FindObjectOfType<PlayerStats>();
+        playerStats.cash += cashDrop;
+        playerStats.kills++;
+
         Destroy(gameObject);
     }
 }

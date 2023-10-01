@@ -11,13 +11,19 @@ public class InterfaceManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI currentBulletsText;
     [SerializeField] private TextMeshProUGUI magazineSizeText;
     [SerializeField] private Slider presidentHealthBar;
+    [SerializeField] private TextMeshProUGUI killsText;
+    [SerializeField] private string killsLabel = "Kills";
+    [SerializeField] private TextMeshProUGUI cashText;
+    [SerializeField] private string cashSymbol = "$";
+    [SerializeField] private TextMeshProUGUI durationText;
+    [SerializeField] private string durationSeparator = ":";
 
     [Header("Game Over UI")]
     [SerializeField] private GameObject gameOverUI;
-    [SerializeField] private TextMeshProUGUI killsText;
-    [SerializeField] private string killsLabel = "Kills: ";
-    [SerializeField] private TextMeshProUGUI timeSurvivedText;
-    [SerializeField] private string timeSurvivedLabel = "Time Survived: ";
+    [SerializeField] private TextMeshProUGUI gameOverKillsText;
+    [SerializeField] private string gameOverKillsLabel = "Kills: ";
+    [SerializeField] private TextMeshProUGUI gameOverTimeSurvivedText;
+    [SerializeField] private string gameOverTtimeSurvivedLabel = "Time Survived: ";
 
     private void Start()
     {
@@ -35,6 +41,13 @@ public class InterfaceManager : MonoBehaviour
         weaponName.text = selectedWeapon.name;
     }
 
+    public void SetStatsUI(int durationSeconds, int kills, int cash)
+    {
+        cashText.text = cashSymbol + cash.ToString("0");
+        killsText.text = kills.ToString("0") + killsLabel;
+        durationText.text = durationSeconds.ToString("0") + durationSeparator; // TODO split into minutes : seconds
+    }
+
     public void SetPresidentHealthBar(float value)
     {
         presidentHealthBar.value = value;
@@ -42,8 +55,8 @@ public class InterfaceManager : MonoBehaviour
 
     public void ShowGameOverUI(int timeSurvived, int killCount)
     {
-        timeSurvivedText.text = timeSurvivedLabel + timeSurvived.ToString();
-        killsText.text = killsLabel + killsLabel.ToString();
+        gameOverTimeSurvivedText.text = gameOverTtimeSurvivedLabel + timeSurvived.ToString();
+        gameOverKillsText.text = gameOverKillsLabel + killCount.ToString("000");
         gameOverUI.SetActive(true);
     }
 }

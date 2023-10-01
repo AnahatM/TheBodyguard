@@ -8,12 +8,16 @@ public class PresidentHealth : MonoBehaviour
     [SerializeField] private int fullHealth = 1000;
 
     private InterfaceManager interfaceManager;
+    private PlayerStats playerStats;
+    private Pause pause;
 
     public int health;
 
     private void Awake()
     {
+        playerStats = FindObjectOfType<PlayerStats>();
         interfaceManager = FindObjectOfType<InterfaceManager>();
+        pause = FindObjectOfType<Pause>();
     }
 
     private void Start()
@@ -36,7 +40,7 @@ public class PresidentHealth : MonoBehaviour
 
     private void HandleGameOver()
     {
-        Debug.Log("Game Over");
-        FindObjectOfType<SceneFader>().ReloadScene();
+        pause.PauseGame(showUI: false);
+        interfaceManager.ShowGameOverUI(playerStats.timeSurvived, playerStats.kills);
     }
 }
