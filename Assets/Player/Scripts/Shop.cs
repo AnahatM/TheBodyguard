@@ -54,4 +54,19 @@ public class Shop : MonoBehaviour
         pause.UnpauseGame();
         interfaceManager.HideShopUI();
     }
+
+    public void HealPresidentHealth(int amount)
+    {
+
+    }
+
+    public void IncreasePresidentMaxHealth(int amount)
+    {
+
+    }
+
+    public void IncreasePresidentSpeed(float speedIncrease)
+    {
+
+    }
 }

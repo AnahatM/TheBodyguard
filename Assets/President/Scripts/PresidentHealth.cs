@@ -30,6 +30,7 @@ public class PresidentHealth : MonoBehaviour
 
     private void Update()
     {
+        health = Mathf.Clamp(health, 0, fullHealth);
         interfaceManager.SetPresidentHealthBar((float)health / (float)fullHealth);
     }
 
