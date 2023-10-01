@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 314380840f2da0241bc253fc65d0589a, type: 3}
+  m_Name: Shotgun
+  m_EditorClassIdentifier: 
+  weaponSprite: {fileID: 21300000, guid: b6975b0f48c078b409d50c52c5f16f8d, type: 3}
+  weaponName: Shotgun
+  magazineSize: 6
+  fireRate: 1
+  reloadTime: 2
+  bulletPrefab: {fileID: 293962322021500226, guid: 9cabb6da59174a448985e4e3c77f70f6, type: 3}
+  shootSFX: {fileID: 8300000, guid: a8390e3d27bc5264388bef33f0d31736, type: 3}
+  reloadSFX: {fileID: 8300000, guid: 8d2b1d18db8e7664fbd742c9fe910476, type: 3}
+  emptyClipSFX: {fileID: 8300000, guid: 85275fa3773e70743afaa2d5ac95e271, type: 3}
+  shootParticles: {fileID: 0}
