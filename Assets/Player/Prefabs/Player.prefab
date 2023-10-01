@@ -758,7 +758,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startInventory:
   - {fileID: 11400000, guid: 9c4654db59829874fb39d6cf2522a25c, type: 2}
-  - {fileID: 11400000, guid: 9e68307cb5a102c4185a5c64eecc01eb, type: 2}
   inventory: []
 --- !u!114 &2056357718775364286
 MonoBehaviour:

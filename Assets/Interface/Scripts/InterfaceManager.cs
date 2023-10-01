@@ -6,10 +6,12 @@ using TMPro;
 
 public class InterfaceManager : MonoBehaviour
 {
-    [Header("References")]
+    [Header("Weapon UI")]
     [SerializeField] private TextMeshProUGUI weaponName;
     [SerializeField] private TextMeshProUGUI currentBulletsText;
     [SerializeField] private TextMeshProUGUI magazineSizeText;
+
+    [Header("HUD")]
     [SerializeField] private Slider presidentHealthBar;
     [SerializeField] private TextMeshProUGUI killsText;
     [SerializeField] private string killsLabel = "Kills";
@@ -17,6 +19,10 @@ public class InterfaceManager : MonoBehaviour
     [SerializeField] private string cashSymbol = "$";
     [SerializeField] private TextMeshProUGUI durationText;
     [SerializeField] private string durationSeparator = ":";
+
+    [Header("Inventory UI")]
+    [SerializeField] private Transform inventoryUIContainer;
+    [SerializeField] private GameObject inventoryButtonPrefab;
 
     [Header("Game Over UI")]
     [SerializeField] private GameObject gameOverUI;
@@ -71,5 +77,15 @@ public class InterfaceManager : MonoBehaviour
     public void HideShopUI()
     {
         shopUI.SetActive(false);
+    }
+
+    public void CreateInventoryButton(WeaponConfig weapon)
+    {
+        InventoryButton btn = Instantiate(
+            inventoryButtonPrefab,
+            inventoryUIContainer
+        ).GetComponent<InventoryButton>();
+        btn.linkedWeapon = weapon;
+        btn.UpdateIcon();
     }
 }

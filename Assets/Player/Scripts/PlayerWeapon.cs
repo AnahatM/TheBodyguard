@@ -40,14 +40,10 @@ public class PlayerWeapon : MonoBehaviour
         spawnedBulletsContainer = GameObject.Find(spawnedBulletsContainerName).transform;
     }
 
-    private void Start()
-    {
-        if (playerInventory.inventory[0])
-            SelectWeapon(playerInventory.inventory[0]);
-    }
-
     private void Update()
     {
+        if (selectedWeapon == null) return;
+
         timeSinceLastShot += Time.deltaTime;
 
         if (Input.GetMouseButtonDown(shootMouseBtn) && !isReloading && timeSinceLastShot >= 1f / selectedWeapon.fireRate)
@@ -64,7 +60,7 @@ public class PlayerWeapon : MonoBehaviour
         interfaceManager.SetWeaponUI(selectedWeapon);
     }
 
-    private void SelectWeapon(WeaponConfig weapon)
+    public void SelectWeapon(WeaponConfig weapon)
     {
         selectedWeapon = weapon;
         weaponSprite.sprite = selectedWeapon.weaponSprite;
