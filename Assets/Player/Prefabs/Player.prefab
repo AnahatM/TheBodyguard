@@ -758,6 +758,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startInventory:
   - {fileID: 11400000, guid: 9c4654db59829874fb39d6cf2522a25c, type: 2}
+  - {fileID: 11400000, guid: 9e68307cb5a102c4185a5c64eecc01eb, type: 2}
   inventory: []
 --- !u!114 &2056357718775364286
 MonoBehaviour:
@@ -805,7 +806,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16ddbd28a804a6b4997412131d9f0981, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shopKey: 115
+  shopKey: 116
   shopActive: 0
 --- !u!1 &8836573239810065144
 GameObject:

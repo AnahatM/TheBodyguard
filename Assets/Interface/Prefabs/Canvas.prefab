@@ -2758,7 +2758,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "[S] \nOpen Shop"
+  m_text: "[T] \nOpen Shop"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 250f11efb9c487647a0aa3ad8ff4baf4, type: 2}
   m_sharedMaterial: {fileID: 5381317328424569754, guid: 250f11efb9c487647a0aa3ad8ff4baf4, type: 2}
