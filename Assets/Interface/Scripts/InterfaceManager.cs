@@ -25,6 +25,9 @@ public class InterfaceManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI gameOverTimeSurvivedText;
     [SerializeField] private string gameOverTtimeSurvivedLabel = "Time Survived: ";
 
+    [Header("Shop UI")]
+    [SerializeField] private GameObject shopUI;
+
     private void Start()
     {
         gameOverUI.SetActive(false);
@@ -58,5 +61,15 @@ public class InterfaceManager : MonoBehaviour
         gameOverTimeSurvivedText.text = gameOverTtimeSurvivedLabel + timeSurvived.ToString();
         gameOverKillsText.text = gameOverKillsLabel + killCount.ToString("000");
         gameOverUI.SetActive(true);
+    }
+
+    public void ShowShopUI()
+    {
+        shopUI.SetActive(true);
+    }
+
+    public void HideShopUI()
+    {
+        shopUI.SetActive(false);
     }
 }

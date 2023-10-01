@@ -240,6 +240,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3671206330033997140, guid: 7cb55a7f812f4e64b8e2c18ce52ed6e3, type: 3}
   m_PrefabInstance: {fileID: 8236346527474369885}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &575872337 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2461470972248662342, guid: 7cb55a7f812f4e64b8e2c18ce52ed6e3, type: 3}
+  m_PrefabInstance: {fileID: 8236346527474369885}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16ddbd28a804a6b4997412131d9f0981, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &150753742021157402
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -348,6 +359,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 487134330}
+    - target: {fileID: 7330832001594729106, guid: 6b1cec64c439bc249955b2da580ac2ca, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 575872337}
     - target: {fileID: 7519532202793102700, guid: 6b1cec64c439bc249955b2da580ac2ca, type: 3}
       propertyPath: m_Name
       value: Canvas
