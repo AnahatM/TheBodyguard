@@ -739,6 +739,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4156a3cd6e709824f83955661a926dfb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  customCursor: {fileID: 2800000, guid: f090dd01da2f95d4aa30675a178fee68, type: 3}
   playerBody: {fileID: 3674694758415580680}
   rightArm: {fileID: 6877912039048126214}
   leftArm: {fileID: 5550897163804103860}
@@ -805,6 +806,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16ddbd28a804a6b4997412131d9f0981, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  upgradeCost: 50
   shopKey: 116
   shopActive: 0
 --- !u!1 &8836573239810065144

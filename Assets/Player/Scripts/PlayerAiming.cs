@@ -5,6 +5,9 @@ using UnityEngine;
 
 public class PlayerAiming : MonoBehaviour
 {
+    [Header("Custom Cursor")]
+    [SerializeField] private Texture2D customCursor;
+
     [Header("Character References")]
     [SerializeField] private Transform playerBody;
     [SerializeField] private Transform rightArm;
@@ -19,6 +22,11 @@ public class PlayerAiming : MonoBehaviour
     private void Awake()
     {
         cam = Camera.main;
+    }
+
+    private void Start()
+    {
+        Cursor.SetCursor(customCursor, Vector2.zero, CursorMode.Auto);
     }
 
     private void Update()

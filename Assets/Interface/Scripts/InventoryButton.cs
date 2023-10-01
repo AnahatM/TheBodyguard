@@ -12,8 +12,6 @@ public class InventoryButton : MonoBehaviour
 
     public WeaponConfig linkedWeapon;
 
-    // TODO "active" indicator if selected
-
     private void Awake()
     {
         playerWeapon = FindObjectOfType<PlayerWeapon>();
