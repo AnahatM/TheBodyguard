@@ -12,7 +12,7 @@ public class EnemyMovement : MonoBehaviour
     [SerializeField] private float moveSpeed = 2f;
     [SerializeField] private float distanceToMaintain = 3f;
 
-    private PresidentHealth president;
+    public PresidentHealth president;
     private Rigidbody2D rb;
 
     private Vector3 directionToPresident;
@@ -20,7 +20,6 @@ public class EnemyMovement : MonoBehaviour
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
-        president = FindObjectOfType<PresidentHealth>();
     }
 
     private void Update()
@@ -31,17 +30,19 @@ public class EnemyMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        MoveToPlayer();
+        MoveToPresident();
     }
 
     private void SetDirection()
     {
+        if (president == null) return;
         directionToPresident = president.transform.position - transform.position;
         directionToPresident.Normalize();
     }
 
-    private void MoveToPlayer()
+    private void MoveToPresident()
     {
+        if (president == null) return;
         Vector3 targetPosition = president.transform.position - directionToPresident * distanceToMaintain;
         rb.MovePosition(Vector3.MoveTowards(transform.position, targetPosition, moveSpeed * Time.fixedDeltaTime));
     }

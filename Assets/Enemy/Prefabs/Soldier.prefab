@@ -302,7 +302,7 @@ GameObject:
   - component: {fileID: 7490726098060846359}
   - component: {fileID: 5862689684071387395}
   m_Layer: 0
-  m_Name: Enemy
+  m_Name: Soldier
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -398,7 +398,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d6aed0ff0214934b9ddf5029492a70e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fullHealth: 100
+  fullHealth: 20
   health: 0
 --- !u!114 &5862689684071387395
 MonoBehaviour:
@@ -418,6 +418,7 @@ MonoBehaviour:
   - {fileID: 7465085559203467287}
   moveSpeed: 2
   distanceToMaintain: 3
+  president: {fileID: 0}
 --- !u!1 &6406745669564970448
 GameObject:
   m_ObjectHideFlags: 0
