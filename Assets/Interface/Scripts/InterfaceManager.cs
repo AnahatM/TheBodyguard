@@ -12,6 +12,18 @@ public class InterfaceManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI magazineSizeText;
     [SerializeField] private Slider presidentHealthBar;
 
+    [Header("Game Over UI")]
+    [SerializeField] private GameObject gameOverUI;
+    [SerializeField] private TextMeshProUGUI killsText;
+    [SerializeField] private string killsLabel = "Kills: ";
+    [SerializeField] private TextMeshProUGUI timeSurvivedText;
+    [SerializeField] private string timeSurvivedLabel = "Time Survived: ";
+
+    private void Start()
+    {
+        gameOverUI.SetActive(false);
+    }
+
     public void SetBulletsUI(int bullets, int mag)
     {
         currentBulletsText.text = bullets.ToString("0");
@@ -26,5 +38,12 @@ public class InterfaceManager : MonoBehaviour
     public void SetPresidentHealthBar(float value)
     {
         presidentHealthBar.value = value;
+    }
+
+    public void ShowGameOverUI(int timeSurvived, int killCount)
+    {
+        timeSurvivedText.text = timeSurvivedLabel + timeSurvived.ToString();
+        killsText.text = killsLabel + killsLabel.ToString();
+        gameOverUI.SetActive(true);
     }
 }

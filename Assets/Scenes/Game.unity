@@ -252,18 +252,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 487134330}
-    - target: {fileID: 4687578890479514841, guid: 6b1cec64c439bc249955b2da580ac2ca, type: 3}
-      propertyPath: m_Color.b
-      value: 0.41176474
-      objectReference: {fileID: 0}
-    - target: {fileID: 4687578890479514841, guid: 6b1cec64c439bc249955b2da580ac2ca, type: 3}
-      propertyPath: m_Color.g
-      value: 0.8588236
-      objectReference: {fileID: 0}
-    - target: {fileID: 4687578890479514841, guid: 6b1cec64c439bc249955b2da580ac2ca, type: 3}
-      propertyPath: m_Color.r
-      value: 0.5686275
-      objectReference: {fileID: 0}
     - target: {fileID: 4841354474593910628, guid: 6b1cec64c439bc249955b2da580ac2ca, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -360,26 +348,18 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 487134330}
-    - target: {fileID: 7434018655674627093, guid: 6b1cec64c439bc249955b2da580ac2ca, type: 3}
-      propertyPath: m_Color.a
-      value: 0.80784315
-      objectReference: {fileID: 0}
-    - target: {fileID: 7434018655674627093, guid: 6b1cec64c439bc249955b2da580ac2ca, type: 3}
-      propertyPath: m_Color.b
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7434018655674627093, guid: 6b1cec64c439bc249955b2da580ac2ca, type: 3}
-      propertyPath: m_Color.g
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7434018655674627093, guid: 6b1cec64c439bc249955b2da580ac2ca, type: 3}
-      propertyPath: m_Color.r
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7519532202793102700, guid: 6b1cec64c439bc249955b2da580ac2ca, type: 3}
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 9015750129317039566, guid: 6b1cec64c439bc249955b2da580ac2ca, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 487134330}
+    - target: {fileID: 9153895196079275189, guid: 6b1cec64c439bc249955b2da580ac2ca, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 487134330}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
