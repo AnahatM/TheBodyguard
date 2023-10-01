@@ -15,9 +15,18 @@ public class Pause : MonoBehaviour
     [Header("Pause Values")]
     [SerializeField] private float pauseTimeScale = 0;
 
+    private PresidentHealth presidentHealth;
+    private Shop shop;
+
     private float startTimeScale = 1;
 
-    [HideInInspector] public bool isPaused = false;
+    public bool isPaused = false;
+
+    private void Awake()
+    {
+        presidentHealth = FindObjectOfType<PresidentHealth>();
+        shop = FindObjectOfType<Shop>();
+    }
 
     private void Start()
     {
@@ -39,12 +48,14 @@ public class Pause : MonoBehaviour
     {
         Time.timeScale = startTimeScale;
         pauseUI.SetActive(false);
+        isPaused = false;
     }
 
     public void PauseGame(bool showUI = true)
     {
         Time.timeScale = pauseTimeScale;
-        if (showUI)
+        if (showUI && !shop.shopActive && !presidentHealth.isGameOver)
             pauseUI.SetActive(true);
+        isPaused = true;
     }
 }

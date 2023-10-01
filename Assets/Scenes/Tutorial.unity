@@ -917,7 +917,7 @@ MonoBehaviour:
     Pause
     - Esc / P
 
-    Shop - sT'
+    Shop - T'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9342e03f4699bc94d98946cb5faeb93d, type: 2}
   m_sharedMaterial: {fileID: 5381317328424569754, guid: 9342e03f4699bc94d98946cb5faeb93d, type: 2}

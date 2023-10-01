@@ -13,6 +13,8 @@ public class PresidentHealth : MonoBehaviour
 
     public int health;
 
+    public bool isGameOver = false;
+
     private void Awake()
     {
         playerStats = FindObjectOfType<PlayerStats>();
@@ -22,6 +24,7 @@ public class PresidentHealth : MonoBehaviour
 
     private void Start()
     {
+        isGameOver = false;
         health = fullHealth;
     }
 
@@ -40,6 +43,7 @@ public class PresidentHealth : MonoBehaviour
 
     private void HandleGameOver()
     {
+        isGameOver = true;
         pause.PauseGame(showUI: false);
         interfaceManager.ShowGameOverUI(playerStats.timeSurvived, playerStats.kills);
     }

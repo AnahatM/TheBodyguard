@@ -10,6 +10,7 @@ public class Shop : MonoBehaviour
 
     private Pause pause;
     private InterfaceManager interfaceManager;
+    private PresidentHealth presidentHealth;
 
     public bool shopActive = false;
 
@@ -17,6 +18,7 @@ public class Shop : MonoBehaviour
     {
         pause = FindObjectOfType<Pause>();
         interfaceManager = FindObjectOfType<InterfaceManager>();
+        presidentHealth = FindObjectOfType<PresidentHealth>();
     }
 
     private void Start()
@@ -40,7 +42,7 @@ public class Shop : MonoBehaviour
 
     private void ShowShop()
     {
-        if (shopActive) return;
+        if (shopActive || presidentHealth.isGameOver || (pause.isPaused && !shopActive)) return;
         shopActive = true;
         pause.PauseGame(showUI: false);
         interfaceManager.ShowShopUI();
