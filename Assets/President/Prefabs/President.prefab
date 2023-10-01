@@ -234,7 +234,7 @@ MonoBehaviour:
   - {fileID: 530636370374961586}
   - {fileID: 8604225530002925173}
   - {fileID: 1983277893022016485}
-  moveSpeed: 5
+  moveSpeed: 3.5
   distanceToMaintain: 2
 --- !u!114 &5770133639854832622
 MonoBehaviour:
@@ -250,6 +250,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fullHealth: 1000
   health: 0
+  isGameOver: 0
 --- !u!1 &4951483620561462834
 GameObject:
   m_ObjectHideFlags: 0

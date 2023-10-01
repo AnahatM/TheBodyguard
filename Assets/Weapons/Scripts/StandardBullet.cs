@@ -6,7 +6,7 @@ using UnityEngine;
 public class StandardBullet : MonoBehaviour
 {
     [Header("Gameplay Values")]
-    [SerializeField] private int bulletDamage = 10;
+    [SerializeField] protected int bulletDamage = 10;
 
     [Header("Bullet Movement")]
     [SerializeField] private float bulletSpeed = 15;
@@ -18,7 +18,7 @@ public class StandardBullet : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
     }
 
-    private void Start()
+    protected virtual void Start()
     {
         SetBulletSpeed();
     }
@@ -34,7 +34,7 @@ public class StandardBullet : MonoBehaviour
         rb.velocity = moveDirection.normalized * bulletSpeed;
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    protected virtual void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.TryGetComponent<EnemyHealth>(out var enemyHealth))
         {
