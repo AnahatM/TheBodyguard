@@ -15,6 +15,7 @@ public class EnemyMovement : MonoBehaviour
     public PresidentHealth president;
     private Rigidbody2D rb;
     private EnemyAiming enemyAiming;
+    private EnemyShooting enemyShooting;
 
     private Vector3 directionToPresident;
 
@@ -22,11 +23,12 @@ public class EnemyMovement : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         enemyAiming = GetComponent<EnemyAiming>();
+        enemyShooting = GetComponent<EnemyShooting>();
     }
 
     private void Start()
     {
-        enemyAiming.enabled = false;
+        enemyAiming.enabled = enemyShooting.enabled = false;
     }
 
     private void Update()
@@ -54,7 +56,7 @@ public class EnemyMovement : MonoBehaviour
         rb.MovePosition(Vector3.MoveTowards(transform.position, targetPosition, moveSpeed * Time.fixedDeltaTime));
 
         if (Vector2.Distance(president.transform.position, transform.position) <= distanceToMaintain)
-            enemyAiming.enabled = true;
+            enemyAiming.enabled = enemyShooting.enabled = true;
     }
 
     private void FlipSprite()

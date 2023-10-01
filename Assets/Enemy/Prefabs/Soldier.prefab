@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7709784054542633431}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: WeaponPivot
   m_TagString: Untagged
   m_Icon: {fileID: 8418204508859773708, guid: 0000000000000000d000000000000000, type: 0}
@@ -43,7 +43,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4907327751322105007}
   - component: {fileID: 8564168401679276303}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Flashlight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -125,7 +125,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7022824004423080420}
   - component: {fileID: 4573573049954989448}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: LeftHand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -209,7 +209,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6305406427681581721}
   - component: {fileID: 1428454886381674595}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: RightHand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -293,7 +293,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8666567345625907584}
   - component: {fileID: 6639674278473581345}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -376,7 +376,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2269607572377149157}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -417,7 +417,8 @@ GameObject:
   - component: {fileID: 7490726098060846359}
   - component: {fileID: 5862689684071387395}
   - component: {fileID: -8448892230980308742}
-  m_Layer: 0
+  - component: {fileID: -6857083739214400481}
+  m_Layer: 6
   m_Name: Soldier
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -555,6 +556,23 @@ MonoBehaviour:
   weaponPivot: {fileID: 7709784054542633431}
   weaponSprite: {fileID: 8429793464607184368}
   spriteZCompensation: 90
+--- !u!114 &-6857083739214400481
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5551947887820264869}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b208b716f5f730f4b9736008ac12bfdb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shootPoint: {fileID: 1323929930430247873}
+  weaponPivot: {fileID: 7709784054542633431}
+  bulletPrefab: {fileID: 293962322021500226, guid: 914a7b6cd9c92d1448798abb88d91957, type: 3}
+  initialShootingDelay: 1.5
+  shootDelay: 1
 --- !u!1 &6406745669564970448
 GameObject:
   m_ObjectHideFlags: 0
@@ -565,7 +583,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7642370959085233920}
   - component: {fileID: 7465085559203467287}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: RightLeg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -649,7 +667,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1920737449167949142}
   - component: {fileID: 2957466299891264779}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Leftleg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -733,7 +751,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2598170621452323213}
   - component: {fileID: 885802952816453883}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Gun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -817,7 +835,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1323929930430247873}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: ShootPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
