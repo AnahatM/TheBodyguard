@@ -379,7 +379,7 @@ GameObject:
   - component: {fileID: 8443652616733929561}
   - component: {fileID: 194818296135942749}
   m_Layer: 0
-  m_Name: Pistol
+  m_Name: Gun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -805,6 +805,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16ddbd28a804a6b4997412131d9f0981, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shopKey: 115
+  shopActive: 0
 --- !u!1 &8836573239810065144
 GameObject:
   m_ObjectHideFlags: 0

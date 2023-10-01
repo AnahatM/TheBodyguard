@@ -67,6 +67,7 @@ public class PlayerWeapon : MonoBehaviour
     private void SelectWeapon(WeaponConfig weapon)
     {
         selectedWeapon = weapon;
+        weaponSprite.sprite = selectedWeapon.weaponSprite;
         currentMagSize = selectedWeapon.magazineSize;
         currentBulletCount = selectedWeapon.magazineSize;
     }
