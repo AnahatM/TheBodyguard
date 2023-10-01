@@ -16,7 +16,7 @@ MonoBehaviour:
   weaponName: Machine Gun
   isFullAuto: 1
   magazineSize: 30
-  fireRate: 5
+  fireRate: 10
   reloadTime: 2
   bulletPrefab: {fileID: 293962322021500226, guid: 9cabb6da59174a448985e4e3c77f70f6, type: 3}
   shootSFX: {fileID: 8300000, guid: a8390e3d27bc5264388bef33f0d31736, type: 3}

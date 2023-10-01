@@ -398,6 +398,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d6aed0ff0214934b9ddf5029492a70e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cashDrop: 10
   fullHealth: 20
   health: 0
 --- !u!114 &5862689684071387395
@@ -416,8 +417,8 @@ MonoBehaviour:
   - {fileID: 6639674278473581345}
   - {fileID: 2957466299891264779}
   - {fileID: 7465085559203467287}
-  moveSpeed: 2
-  distanceToMaintain: 3
+  moveSpeed: 3.5
+  distanceToMaintain: 2
   president: {fileID: 0}
 --- !u!1 &6406745669564970448
 GameObject:
