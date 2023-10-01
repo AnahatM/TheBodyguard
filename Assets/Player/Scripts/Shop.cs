@@ -8,9 +8,12 @@ public class Shop : MonoBehaviour
     [Header("Keybindings")]
     [SerializeField] private KeyCode shopKey = KeyCode.S;
 
+    private PlayerStats playerStats;
+
     private Pause pause;
     private InterfaceManager interfaceManager;
     private PresidentHealth presidentHealth;
+    private FollowPlayer presidentMovement;
 
     public bool shopActive = false;
 
@@ -19,6 +22,8 @@ public class Shop : MonoBehaviour
         pause = FindObjectOfType<Pause>();
         interfaceManager = FindObjectOfType<InterfaceManager>();
         presidentHealth = FindObjectOfType<PresidentHealth>();
+        playerStats = FindObjectOfType<PlayerStats>();
+        presidentMovement = presidentHealth.GetComponent<FollowPlayer>();
     }
 
     private void Start()
@@ -55,18 +60,24 @@ public class Shop : MonoBehaviour
         interfaceManager.HideShopUI();
     }
 
-    public void HealPresidentHealth(int amount)
+    public void HealPresidentHealth(int amount, int cost = 50)
     {
-
+        if (playerStats.cash < cost) return;
+        presidentHealth.health += amount;
+        playerStats.cash -= cost;
     }
 
-    public void IncreasePresidentMaxHealth(int amount)
+    public void IncreasePresidentMaxHealth(int amount, int cost = 50)
     {
-
+        if (playerStats.cash < cost) return;
+        presidentHealth.fullHealth += amount;
+        playerStats.cash -= cost;
     }
 
-    public void IncreasePresidentSpeed(float speedIncrease)
+    public void IncreasePresidentSpeed(float speedIncrease, int cost = 50)
     {
-
+        if (playerStats.cash < cost) return;
+        presidentMovement.moveSpeed += speedIncrease;
+        playerStats.cash -= cost;
     }
 }

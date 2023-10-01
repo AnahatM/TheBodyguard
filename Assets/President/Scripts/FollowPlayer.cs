@@ -9,7 +9,7 @@ public class FollowPlayer : MonoBehaviour
     [SerializeField] private SpriteRenderer[] flippableSprites;
 
     [Header("Movement")]
-    [SerializeField] private float moveSpeed = 5f;
+    [SerializeField] public float moveSpeed = 5f;
     [SerializeField] private float distanceToMaintain = 2.0f;
 
     private PlayerMovement player;

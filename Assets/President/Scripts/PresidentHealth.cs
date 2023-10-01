@@ -5,7 +5,7 @@ using UnityEngine;
 public class PresidentHealth : MonoBehaviour
 {
     [Header("Health Values")]
-    [SerializeField] private int fullHealth = 1500;
+    [SerializeField] public int fullHealth = 1500;
 
     private InterfaceManager interfaceManager;
     private PlayerStats playerStats;
