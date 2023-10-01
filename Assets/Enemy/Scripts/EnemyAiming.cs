@@ -31,9 +31,6 @@ public class EnemyAiming : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log(president == null);
-        Debug.Log(rightArm == null);
-        Debug.Log(leftArm == null);
         AimArm(rightArm, 1);
         AimArm(leftArm, 1);
         AimArm(weaponPivot, 0);
