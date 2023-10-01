@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 314380840f2da0241bc253fc65d0589a, type: 3}
   m_Name: Shotgun
   m_EditorClassIdentifier: 
-  weaponSprite: {fileID: 21300000, guid: b6975b0f48c078b409d50c52c5f16f8d, type: 3}
+  weaponSprite: {fileID: 21300000, guid: 8e4a224b33c75ef44aca97a63fe613a5, type: 3}
   weaponName: Shotgun
+  isFullAuto: 0
   magazineSize: 6
   fireRate: 1
   reloadTime: 2
