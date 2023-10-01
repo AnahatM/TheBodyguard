@@ -52,6 +52,6 @@ public class WeaponBuyButton : MonoBehaviour
         if (playerStats.cash < weaponCost) return;
         playerInventory.AddToInventory(purchasableWeapon);
         playerStats.cash -= weaponCost;
-        Destroy(gameObject, btnDestroyDelay);
+        Destroy(gameObject);
     }
 }

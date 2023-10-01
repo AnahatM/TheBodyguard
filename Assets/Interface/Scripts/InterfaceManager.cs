@@ -13,6 +13,8 @@ public class InterfaceManager : MonoBehaviour
 
     [Header("HUD")]
     [SerializeField] private Slider presidentHealthBar;
+    [SerializeField] private TextMeshProUGUI healthText;
+    [SerializeField] private string healthSeparator = "/";
     [SerializeField] private TextMeshProUGUI killsText;
     [SerializeField] private string killsLabel = "Kills";
     [SerializeField] private TextMeshProUGUI cashText;
@@ -61,9 +63,10 @@ public class InterfaceManager : MonoBehaviour
         durationText.text = minutes.ToString("00") + ":" + seconds.ToString("00");
     }
 
-    public void SetPresidentHealthBar(float value)
+    public void SetPresidentHealthBar(float value, int health, int fullHealth)
     {
         presidentHealthBar.value = value;
+        healthText.text = health.ToString() + healthSeparator + fullHealth.ToString();
     }
 
     public void ShowGameOverUI(int timeSurvived, int killCount)

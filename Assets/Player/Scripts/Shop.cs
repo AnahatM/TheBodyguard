@@ -5,6 +5,9 @@ using UnityEngine;
 
 public class Shop : MonoBehaviour
 {
+    [Header("Upgrades")]
+    [SerializeField] private int upgradeCost = 50;
+
     [Header("Keybindings")]
     [SerializeField] private KeyCode shopKey = KeyCode.S;
 
@@ -60,24 +63,24 @@ public class Shop : MonoBehaviour
         interfaceManager.HideShopUI();
     }
 
-    public void HealPresidentHealth(int amount, int cost = 50)
+    public void HealPresidentHealth(int amount)
     {
-        if (playerStats.cash < cost) return;
+        if (playerStats.cash < upgradeCost) return;
         presidentHealth.health += amount;
-        playerStats.cash -= cost;
+        playerStats.cash -= upgradeCost;
     }
 
-    public void IncreasePresidentMaxHealth(int amount, int cost = 50)
+    public void IncreasePresidentMaxHealth(int amount)
     {
-        if (playerStats.cash < cost) return;
+        if (playerStats.cash < upgradeCost) return;
         presidentHealth.fullHealth += amount;
-        playerStats.cash -= cost;
+        playerStats.cash -= upgradeCost;
     }
 
-    public void IncreasePresidentSpeed(float speedIncrease, int cost = 50)
+    public void IncreasePresidentSpeed(float speedIncrease)
     {
-        if (playerStats.cash < cost) return;
+        if (playerStats.cash < upgradeCost) return;
         presidentMovement.moveSpeed += speedIncrease;
-        playerStats.cash -= cost;
+        playerStats.cash -= upgradeCost;
     }
 }
