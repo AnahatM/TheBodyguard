@@ -3878,7 +3878,7 @@ RectTransform:
   - {fileID: 5260228769834402990}
   - {fileID: 7254259928528796227}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -4407,34 +4407,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1031135349278074871}
     m_Modifications:
-    - target: {fileID: 3660180312797574871, guid: 95cc29df221a95640994488751feb9fb, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3660180312797574871, guid: 95cc29df221a95640994488751feb9fb, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3660180312797574871, guid: 95cc29df221a95640994488751feb9fb, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 4103041418034383173}
-    - target: {fileID: 3660180312797574871, guid: 95cc29df221a95640994488751feb9fb, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3660180312797574871, guid: 95cc29df221a95640994488751feb9fb, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: HandleClick
-      objectReference: {fileID: 0}
-    - target: {fileID: 3660180312797574871, guid: 95cc29df221a95640994488751feb9fb, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: WeaponBuyButton, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 3660180312797574871, guid: 95cc29df221a95640994488751feb9fb, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
     - target: {fileID: 6579589454878638978, guid: 95cc29df221a95640994488751feb9fb, type: 3}
       propertyPath: m_Name
       value: WeaponBuyBtn
@@ -4528,17 +4500,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 95cc29df221a95640994488751feb9fb, type: 3}
---- !u!114 &4103041418034383173 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3174383042769700934, guid: 95cc29df221a95640994488751feb9fb, type: 3}
-  m_PrefabInstance: {fileID: 1512438585107169539}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 73e7319eba94d0e4789ea8ac7d9b8cdd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!224 &8747757820608419511 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7897912430236981172, guid: 95cc29df221a95640994488751feb9fb, type: 3}

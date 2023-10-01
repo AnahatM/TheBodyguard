@@ -14,12 +14,19 @@ public class EnemyMovement : MonoBehaviour
 
     public PresidentHealth president;
     private Rigidbody2D rb;
+    private EnemyAiming enemyAiming;
 
     private Vector3 directionToPresident;
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+        enemyAiming = GetComponent<EnemyAiming>();
+    }
+
+    private void Start()
+    {
+        enemyAiming.enabled = false;
     }
 
     private void Update()
@@ -45,6 +52,9 @@ public class EnemyMovement : MonoBehaviour
         if (president == null) return;
         Vector3 targetPosition = president.transform.position - directionToPresident * distanceToMaintain;
         rb.MovePosition(Vector3.MoveTowards(transform.position, targetPosition, moveSpeed * Time.fixedDeltaTime));
+
+        if (Vector2.Distance(president.transform.position, transform.position) <= distanceToMaintain)
+            enemyAiming.enabled = true;
     }
 
     private void FlipSprite()
