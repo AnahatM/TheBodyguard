@@ -19,7 +19,7 @@ MonoBehaviour:
   fireRate: 1
   reloadTime: 2
   bulletPrefab: {fileID: 293962322021500226, guid: bdbac0b416bd121448ac368fecd30e56, type: 3}
-  shootSFX: {fileID: 8300000, guid: a8390e3d27bc5264388bef33f0d31736, type: 3}
+  shootSFX: {fileID: 8300000, guid: 5d73e4c9b7284314f8bf4727840543ac, type: 3}
   reloadSFX: {fileID: 8300000, guid: 8d2b1d18db8e7664fbd742c9fe910476, type: 3}
   emptyClipSFX: {fileID: 8300000, guid: 85275fa3773e70743afaa2d5ac95e271, type: 3}
   shootParticles: {fileID: 0}
