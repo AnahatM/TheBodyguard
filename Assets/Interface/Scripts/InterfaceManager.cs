@@ -54,7 +54,11 @@ public class InterfaceManager : MonoBehaviour
     {
         cashText.text = cashSymbol + cash.ToString("0");
         killsText.text = kills.ToString("0") + killsLabel;
-        durationText.text = durationSeconds.ToString("0") + durationSeparator; // TODO split into minutes : seconds
+
+        // Split durationSeconds into minutes and seconds
+        int minutes = durationSeconds / 60;
+        int seconds = durationSeconds % 60;
+        durationText.text = minutes.ToString("00") + ":" + seconds.ToString("00");
     }
 
     public void SetPresidentHealthBar(float value)
@@ -64,10 +68,16 @@ public class InterfaceManager : MonoBehaviour
 
     public void ShowGameOverUI(int timeSurvived, int killCount)
     {
-        gameOverTimeSurvivedText.text = gameOverTtimeSurvivedLabel + timeSurvived.ToString();
+        int minutes = timeSurvived / 60;
+        int seconds = timeSurvived % 60;
+
+        string timeSurvivedText = minutes.ToString("00") + ":" + seconds.ToString("00");
+
+        gameOverTimeSurvivedText.text = gameOverTtimeSurvivedLabel + timeSurvivedText;
         gameOverKillsText.text = gameOverKillsLabel + killCount.ToString("000");
         gameOverUI.SetActive(true);
     }
+
 
     public void ShowShopUI()
     {
